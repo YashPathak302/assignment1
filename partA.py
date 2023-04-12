@@ -1,4 +1,6 @@
 import re
+import sys
+filename = sys.argv[1]
 
 # Method/Function: List<Token> tokenize(TextFilePath)
 # Write a method/function that reads in a text file and returns a list of the tokens in that file.
@@ -57,7 +59,7 @@ def writer(tokenDict):
 
 def main():
     # create a list of tokens
-    lst = tokenize("input.txt")
+    lst = tokenize(filename)
     # create a hashmap/dictionary of words mapping to the frequency of the words
     dct = computeWordFrequenceies(lst)
 
